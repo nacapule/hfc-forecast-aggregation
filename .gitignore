@@ -1,0 +1,4 @@
+data/raw
+daily_forecasts.csv
+__pycache__/
+.DS_Store

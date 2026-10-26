@@ -1,0 +1,97 @@
+
+Data audit: counts of submissions unless stated
+Resolved questions                                                88 ordered, 86 binary, 13 unordered
+Prediction file: answer rows                                                                   750181
+Prediction file: submissions                                                                   279289
+Prediction file: accounts                                                                        5062
+Prediction file: platforms                                                                          6
+Removed: question not resolved                                                                   1774
+Removed: made before the question opened                                                         1072
+Removed: made at or after closing or the known outcome                                           3916
+Removed: made after the question's last cutoff                                                    453
+Eligible submissions                                                                           272074
+Removed: replaced later that day by the same account                                            17669
+Kept submissions                                                                               254405
+Kept accounts                                                                                    4938
+Same-day question-days (new submissions that day)                                               12831
+Previous-day question-days                                                                      12655
+Previous-day first days dropped (opened after previous cutoff)                                    176
+Previous-day days with no earlier forecast (uniform)                                               11
+
+Memo Table 1 and scores by question type (lower is better)
+                 overall   binary  ordered  unordered
+Arithmetic mean 0.289688 0.257219 0.286424   0.526581
+median          0.282831 0.246660 0.278646   0.550445
+geometric_mean  0.266084 0.215339 0.276174   0.533486
+trimmed_mean    0.280346 0.244481 0.278752   0.528403
+geometric_odds  0.271600 0.227332 0.276174   0.533486
+
+Memo Table 2: all methods use the previous day's cutoff
+Arithmetic mean         0.291659
+median                  0.285296
+geometric_mean          0.268275
+trimmed_mean            0.282476
+geometric_odds          0.274722
+mean_age_1d             0.248536
+geometric_mean_age_1d   0.234452
+geometric_odds_age_1d   0.235671
+
+GM calculated directly from binary No probabilities, overall
+0.32993229845950833
+
+Binary outcomes
+outcome
+resolved No     66
+resolved Yes    20
+
+Binary questions by outcome: Table 1 methods
+outcome                  resolved No  resolved Yes
+Arithmetic mean             0.220611      0.378026
+median                      0.195579      0.415225
+geometric_mean              0.084241      0.647964
+trimmed_mean                0.203185      0.380760
+geometric_odds              0.172583      0.408005
+geometric_mean_no_first     0.406843      0.180355
+
+Scores at all 12 tested half-lives
+                  Arithmetic mean  geometric_mean  geometric_odds
+Half-life (days)                                                 
+0.010000                 0.317820        0.314758        0.321649
+0.041667                 0.283935        0.279056        0.288794
+0.100000                 0.260829        0.256333        0.262203
+0.250000                 0.247469        0.241103        0.243306
+0.301030                 0.246337        0.239084        0.240798
+0.500000                 0.245603        0.235513        0.236565
+1.000000                 0.248536        0.234452        0.235671
+3.000000                 0.258070        0.238988        0.241136
+7.000000                 0.267839        0.246126        0.249406
+14.000000                0.276192        0.253013        0.257432
+30.000000                0.283408        0.259630        0.265057
+60.000000                0.287367        0.263609        0.269553
+
+Error reduction from daily halving (%)
+Arithmetic mean   14.785499
+geometric_mean    12.607422
+geometric_odds    14.214619
+
+Supplement: paired question differences. SEs assume independent questions and ignore that daily halving was chosen on these data
+                                                   difference       SE  SE / difference (%)  difference / SE
+comparison                                                                                                  
+geometric_mean minus geometric_mean_age_1d           0.033823 0.007100            20.990581         4.764042
+geometric_odds minus geometric_odds_age_1d           0.039051 0.007660            19.616524         5.097743
+geometric_mean_age_1d minus geometric_odds_age_1d   -0.001219 0.008558           702.005118         0.142449
+
+Supplement: historical rate selection, a retrospective check on explored data
+                 selected  no_decay  reduction (%)
+Arithmetic mean  0.249042  0.291659      14.611904
+geometric_mean   0.235114  0.268275      12.360736
+geometric_odds   0.236395  0.274722      13.951010
+
+Historical choices, counted once per cutoff
+method           choice               
+geometric_mean   geometric_mean             5
+                 geometric_mean_age_1d    179
+geometric_odds   geometric_odds             5
+                 geometric_odds_age_1d    179
+Arithmetic mean  Arithmetic mean            5
+                 mean_age_1d              179
